@@ -1,0 +1,16 @@
+#ignore WordPress core files
+/wp-admin
+/wp-includes
+/license.txt
+/readme.html
+/wp-*.php
+/xmlrpc.php
+
+#ignore generated content
+/wp-content/*
+
+#ignore media files
+/data/*
+
+#unignore sample config file
+!/wp-config-oi.php

@@ -1,0 +1,9 @@
+#TODO: import bundle routes
+#example:
+#    resource: "@ExampleBundle/Controller/"
+#    type: annotation
+#    prefix: /
+
+routemaster:
+    resource: "@RoutemasterBundle/Resources/config/routing.yml"
+    prefix:   /

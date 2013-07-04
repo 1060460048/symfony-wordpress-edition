@@ -1,11 +1,12 @@
 {
-    "name": "outlandish/symfony-wordpress-edition",
+	"name": "outlandish/symfony-wordpress-edition",
     "license": "MIT",
     "type": "project",
     "autoload": {
         "psr-0": {
 	        "Outlandish": "src/"
-        }
+        },
+	    "classmap": []
     },
     "require": {
         "php": ">=5.3.3",
@@ -20,17 +21,30 @@
         "post-install-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache"
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+	        "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets"
         ],
         "post-update-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache"
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+	        "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets"
         ]
     },
     "extra": {
         "incenteev-parameters": {
             "file": "app/config/parameters.yml"
-        }
-    }
+        },
+	    "symfony-assets-install": "symlink"
+    },
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "http://wpackagist.org"
+		},
+		{
+			"type": "vcs",
+			"url": "ssh://tsr@beta.gd:7777/var/projects/lib/oowp.git"
+		}
+	]
 }
