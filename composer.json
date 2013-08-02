@@ -13,22 +13,28 @@
         "symfony/framework-bundle": "~2.3",
         "sensio/distribution-bundle": "~2.3",
         "sensio/framework-extra-bundle": "~2.3",
-	    "symfony/class-loader":"~2.3",
+	    "symfony/class-loader": "~2.3",
 	    "symfony/finder": "~2.3",
-        "incenteev/composer-parameter-handler": "~2.0"
+	    "symfony/console": "~2.3",
+	    "symfony/web-profiler-bundle": "~2.3",
+	    "symfony/twig-bundle": "~2.3",
+	    "incenteev/composer-parameter-handler": "~2.0",
+	    "outlandish/routemaster-bundle": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
-	        "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets"
+	        "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+	        "Outlandish\\RoutemasterBundle\\Composer\\WordPressInstaller::install"
         ],
         "post-update-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
-	        "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets"
+	        "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+	        "Outlandish\\RoutemasterBundle\\Composer\\WordPressInstaller::install"
         ]
     },
     "extra": {
@@ -45,6 +51,10 @@
 		{
 			"type": "vcs",
 			"url": "ssh://tsr@beta.gd:7777/var/projects/lib/oowp.git"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/outlandishideas/RoutemasterBundle.git"
 		}
 	]
 }

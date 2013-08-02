@@ -15,6 +15,11 @@ class AppKernel extends Kernel
 	        //new Outlandish\ExampleBundle\ExampleBundle()
         );
 
+	    if (in_array($this->getEnvironment(), array('dev', 'test'))) {
+		    $bundles[] = new \Symfony\Bundle\TwigBundle\TwigBundle();
+		    $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
+	    }
+
         return $bundles;
     }
 

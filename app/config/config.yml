@@ -1,5 +1,6 @@
 imports:
     - resource: parameters.yml
+    - resource: @RoutemasterBundle/Resources/config/services.yml
 
 framework:
     secret:          %secret%
