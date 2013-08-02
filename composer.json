@@ -19,7 +19,18 @@
 	    "symfony/web-profiler-bundle": "~2.3",
 	    "symfony/twig-bundle": "~2.3",
 	    "incenteev/composer-parameter-handler": "~2.0",
-	    "outlandish/routemaster-bundle": "dev-master"
+
+	    "outlandish/routemaster-bundle": "dev-master",
+	    "outlandish/oowp":"dev-master",
+
+	    "wpackagist/404-redirected": "*",
+	    "wpackagist/advanced-custom-fields": "3.x",
+	    "wpackagist/cms-tree-page-view": "*",
+	    "wpackagist/database-sync": "@dev",
+	    "wpackagist/hyper-cache": "@dev",
+	    "wpackagist/posts-to-posts": "*",
+	    "wpackagist/regenerate-thumbnails": "*",
+	    "wpackagist/simple-page-ordering": "*"
     },
     "scripts": {
         "post-install-cmd": [
@@ -41,7 +52,10 @@
         "incenteev-parameters": {
             "file": "app/config/parameters.yml"
         },
-	    "symfony-assets-install": "symlink"
+	    "symfony-assets-install": "symlink",
+	    "installer-paths": {
+		    "web/wp-content/plugins/{$name}/": ["type:wordpress-plugin"]
+	    }
     },
 	"repositories": [
 		{
