@@ -1,0 +1,4 @@
+outlandishgmh:
+    resource: "@OutlandishSiteBundle/Controller"
+    prefix: /
+    type: annotation

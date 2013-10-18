@@ -1,9 +1,7 @@
-#TODO: import bundle routes
-#example:
-#    resource: "@ExampleBundle/Controller/"
-#    type: annotation
-#    prefix: /
+outlandish_site:
+    resource: "@OutlandishSiteBundle/Resources/config/routing.yml"
+    prefix: /
 
 routemaster:
     resource: "@RoutemasterBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix: /
