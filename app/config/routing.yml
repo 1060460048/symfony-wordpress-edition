@@ -3,5 +3,5 @@ outlandish_site:
     prefix: /
 
 routemaster:
-    resource: "@RoutemasterBundle/Resources/config/routing.yml"
+    resource: "@OutlandishRoutemasterBundle/Resources/config/routing.yml"
     prefix: /
