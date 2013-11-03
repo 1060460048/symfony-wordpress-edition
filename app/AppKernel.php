@@ -11,6 +11,7 @@ class AppKernel extends Kernel
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
 	        new Outlandish\RoutemasterBundle\OutlandishRoutemasterBundle(),
+	        new Outlandish\OowpBundle\OutlandishOowpBundle(),
 	        new Outlandish\SiteBundle\OutlandishSiteBundle()
         );
 

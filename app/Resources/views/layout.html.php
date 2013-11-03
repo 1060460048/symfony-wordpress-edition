@@ -14,11 +14,7 @@
 <header class="row">
 	<div class="twelve columns">
 		<nav>
-			<ul><?php
-				ooPost::printMenuItems(array(
-					'post_type' => 'page'
-				)); ?>
-			</ul>
+			<ul><?php echo $view['menu']->render(); ?></ul>
 		</nav>
 	</div>
 </header>

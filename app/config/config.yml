@@ -1,15 +1,15 @@
 imports:
     - resource: parameters.yml
-    - resource: @OutlandishRoutemasterBundle/Resources/config/services.yml
 
 framework:
-    secret:          %secret%
+    #todo: change to a random string
+    secret: TeMpOrArYsEcReT
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
         strict_requirements: ~
     templating:
         engines: ['php']
-    default_locale:  "%locale%"
+    default_locale:  en
     trusted_proxies: ~
     session:         ~
     fragments:       ~

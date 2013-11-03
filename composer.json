@@ -1,12 +1,9 @@
 {
 	"name": "outlandish/symfony-wordpress-edition",
-    "license": "MIT",
-    "type": "project",
     "autoload": {
         "psr-0": {
 	        "Outlandish": "src/"
-        },
-	    "classmap": []
+        }
     },
     "require": {
         "php": ">=5.3.3",
@@ -16,12 +13,12 @@
 	    "symfony/class-loader": "~2.3",
 	    "symfony/finder": "~2.3",
 	    "symfony/console": "~2.3",
+	    "symfony/yaml": "~2.3",
 	    "symfony/web-profiler-bundle": "~2.3",
 	    "symfony/twig-bundle": "~2.3",
-	    "incenteev/composer-parameter-handler": "~2.0",
 
 	    "outlandish/routemaster-bundle": "dev-master",
-	    "outlandish/oowp":"dev-master",
+	    "outlandish/oowp":"dev-symfony",
 
 	    "wpackagist/404-redirected": "*",
 	    "wpackagist/advanced-custom-fields": "3.x",
@@ -34,24 +31,17 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
 	        "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
 	        "Outlandish\\RoutemasterBundle\\Composer\\WordPressInstaller::install"
         ],
         "post-update-cmd": [
-            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
 	        "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
 	        "Outlandish\\RoutemasterBundle\\Composer\\WordPressInstaller::install"
         ]
     },
     "extra": {
-        "incenteev-parameters": {
-            "file": "app/config/parameters.yml"
-        },
 	    "symfony-assets-install": "symlink",
 	    "installer-paths": {
 		    "web/wp-content/plugins/{$name}/": ["type:wordpress-plugin"]

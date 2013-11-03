@@ -1,3 +1,1 @@
-parameters:
-    locale:            en
-    secret:            ThisTokenIsNotSecretSoChangeIt
+parameters: ~

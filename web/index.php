@@ -8,19 +8,7 @@ require 'wp-load.php';
 
 //on a cache hit, we don't get this far
 
-//load Composer autoloader
-require_once __DIR__ . '/../app/autoload.php';
-require_once __DIR__ . '/../app/AppKernel.php';
-
-
-if (defined('WP_DEBUG') && WP_DEBUG) {
-	//create debug mode kernel
-	$kernel = new AppKernel('dev', true);
-} else {
-	//in production mode, class and config cache must be explicitly cleared
-	$kernel = new AppKernel('prod', false);
-	$kernel->loadClassCache();
-}
+$kernel = require_once 'create-kernel.php';
 
 //pretty exception messages
 ExceptionHandler::register($kernel->isDebug());

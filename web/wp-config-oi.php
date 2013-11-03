@@ -1,7 +1,5 @@
 <?php
 
-//Outlandish config v20130802
-
 //TODO: set database
 define('DB_NAME', '');
 define('DB_USER', 'root');
@@ -25,15 +23,14 @@ define('SAVEQUERIES', false);
 //allow filesystem access
 define('FS_METHOD', 'direct');
 
-//} else {
+//}
 
 //enable caching plugin
-define('WP_CACHE', false);
-
-//}
+//define('WP_CACHE', false);
 
 $table_prefix = 'wp_';
 
+//move WP uploads directory out of wp-content
 define('UPLOADS', 'data');
 
 define('DB_CHARSET', 'utf8');
