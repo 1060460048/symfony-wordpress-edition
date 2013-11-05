@@ -1,10 +1,11 @@
 Symfony WordPress Edition
 ========================
 
-Modified Symfony Standard Edition for use with WordPress.
+Modified [Symfony Standard Edition](https://github.com/symfony/symfony-standard) for use with [WordPress](http://wordpress.org).
 
-**NOTE**: Requires the OOWP WordPress plugin which has not yet been released publicly. Until then, this is only of use to
-Outlandish staff and freelancers.
+Includes [RoutemasterBundle](https://github.com/outlandishideas/RoutemasterBundle) which provides some light glue between
+Symfony and WordPress and [OowpBundle](https://github.com/outlandishideas/OowpBundle) which provides object oriented
+wrappers around WP custom post types.
 
 ## Usage
 

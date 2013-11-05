@@ -18,7 +18,8 @@
 	    "symfony/twig-bundle": "~2.3",
 
 	    "outlandish/routemaster-bundle": "dev-master",
-	    "outlandish/oowp":"dev-symfony",
+	    "outlandish/oowp-bundle":"dev-master",
+	    "outlandish/symfony-bridge":"*",
 
 	    "wpackagist/404-redirected": "*",
 	    "wpackagist/advanced-custom-fields": "3.x",
@@ -47,6 +48,8 @@
 		    "web/wp-content/plugins/{$name}/": ["type:wordpress-plugin"]
 	    }
     },
+	"minimum-stability": "dev",
+	"prefer-stable": true,
 	"repositories": [
 		{
 			"type": "composer",
@@ -54,11 +57,11 @@
 		},
 		{
 			"type": "vcs",
-			"url": "ssh://tsr@beta.gd:7777/var/projects/lib/oowp.git"
+			"url": "https://github.com/outlandishideas/OowpBundle.git"
 		},
 		{
 			"type": "vcs",
-			"url": "https://github.com/outlandishideas/RoutemasterBundle.git"
+			"url": "https://github.com/outlandishideas/symfony-bridge.git"
 		}
 	]
 }
