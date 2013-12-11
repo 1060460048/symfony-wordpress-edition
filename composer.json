@@ -1,5 +1,5 @@
 {
-	"name": "outlandish/symfony-wordpress-edition",
+    "name": "outlandish/symfony-wordpress-edition",
     "autoload": {
         "psr-0": {
 	        "Outlandish": "src/"
@@ -16,6 +16,8 @@
 	    "symfony/yaml": "~2.3",
 	    "symfony/web-profiler-bundle": "~2.3",
 	    "symfony/twig-bundle": "~2.3",
+	    "incenteev/composer-parameter-handler": "~2.0",
+
 
 	    "outlandish/routemaster-bundle": "dev-master",
 	    "outlandish/oowp-bundle":"dev-master",
@@ -32,17 +34,22 @@
     },
     "scripts": {
         "post-install-cmd": [
+	    "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
 	        "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
 	        "Outlandish\\RoutemasterBundle\\Composer\\WordPressInstaller::install"
         ],
         "post-update-cmd": [
+	    "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
 	        "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
 	        "Outlandish\\RoutemasterBundle\\Composer\\WordPressInstaller::install"
         ]
     },
     "extra": {
+		"incenteev-parameters": {
+			"file": "app/config/parameters.yml"
+		},
 	    "symfony-assets-install": "symlink",
 	    "installer-paths": {
 		    "web/wp-content/plugins/{$name}/": ["type:wordpress-plugin"]
