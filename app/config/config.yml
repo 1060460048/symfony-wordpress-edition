@@ -2,8 +2,7 @@ imports:
     - resource: parameters.yml
 
 framework:
-    #todo: change to a random string
-    secret: TeMpOrArYsEcReT
+    secret: %secret%
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
         strict_requirements: ~

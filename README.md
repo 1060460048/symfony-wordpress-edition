@@ -10,4 +10,6 @@ wrappers around WP custom post types.
 ## Usage
 
 * Download ZIP archive and run `composer install` (assuming [Composer](http://getcomposer.org/download/) is installed globally).
+* Add DB details to `web/wp-config.php`.
+* Open the `web` folder in a browser and go through the usual WordPress install.
 * See [RoutemasterBundle](https://github.com/outlandishideas/RoutemasterBundle) for further usage instructions.

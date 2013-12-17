@@ -11,7 +11,7 @@ use Outlandish\RoutemasterBundle\Annotation\Template;
 class DefaultController extends BaseController {
 
 	/**
-	 * @Route("/{slugs}/", requirements={"slugs"="[\w-\/]+"})
+	 * Route is specified in routing.yml because it needs to come last
 	 * @Template
 	 */
 	public function defaultPostAction($slugs) {

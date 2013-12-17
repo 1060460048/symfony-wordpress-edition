@@ -2,3 +2,11 @@ outlandishgmh:
     resource: "@OutlandishSiteBundle/Controller"
     prefix: /
     type: annotation
+	
+
+defaultPost:
+    path: /{slugs}/
+    requirements:
+        slugs: "[\w-\/]+"
+    defaults:
+        _controller: SiteBundle:Default:defaultPost
