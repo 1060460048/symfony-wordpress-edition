@@ -9,16 +9,16 @@ wrappers around WP custom post types.
 
 ## Features
 
-* Build your front using Symfony routes, controllers and views
+* Build your front end using Symfony routes, controllers and views
 * Use WordPress's CMS interface on the back end
 * Use `WP_Query` in your controllers to fetch the content to display
 * Compatible with most existing WordPress plugins and Symfony bundles
-* Bridge Symfony and WordPress's event systems on either front or back end
+* Bridge Symfony and WordPress event systems on either front or back end
 
 ## Installation
 
 * Download ZIP archive and run `composer install` (assuming [Composer](http://getcomposer.org/download/) is installed globally).
 * Add DB details to `web/wp-config.php`.
-* Open the `web` folder in a browser and go through the usual WordPress install.
+* Open the `web` folder in a browser and run the usual WordPress install.
 
 See [RoutemasterBundle](https://github.com/outlandishideas/RoutemasterBundle) for further usage instructions.
