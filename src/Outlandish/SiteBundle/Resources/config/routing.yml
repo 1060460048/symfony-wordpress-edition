@@ -1,10 +1,9 @@
-outlandishgmh:
+site_controllers:
     resource: "@OutlandishSiteBundle/Controller"
     prefix: /
     type: annotation
-	
 
-defaultPost:
+default_post:
     path: /{slugs}/
     requirements:
         slugs: "[\w-\/]+"
