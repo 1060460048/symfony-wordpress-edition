@@ -16,13 +16,13 @@
 		"outlandish/oowp-bundle": "dev-master",
 		"outlandish/symfony-bridge": "*",
 
-		"wpackagist/advanced-custom-fields": "trunk",
-		"wpackagist/cms-tree-page-view": "*",
-		"wpackagist/database-sync": "@dev",
-		"wpackagist/hyper-cache": "@dev",
-		"wpackagist/posts-to-posts": "*",
-		"wpackagist/regenerate-thumbnails": "*",
-		"wpackagist/simple-page-ordering": "*"
+		"wpackagist-plugin/advanced-custom-fields": "trunk",
+		"wpackagist-plugin/cms-tree-page-view": "*",
+		"wpackagist-plugin/database-sync": "@dev",
+		"wpackagist-plugin/hyper-cache": "@dev",
+		"wpackagist-plugin/posts-to-posts": "*",
+		"wpackagist-plugin/regenerate-thumbnails": "*",
+		"wpackagist-plugin/simple-page-ordering": "*"
 	},
 	"scripts": {
 		"post-install-cmd": [
